@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_profile">
+
+    <fragment
+        android:id="@+id/navigation_main"
+        android:name="com.example.preeckle.ui.main.MainFragment"
+        android:label="@string/mainTitle"
+        tools:layout="@layout/fragment_main" />
+
+    <fragment
+        android:id="@+id/navigation_populars"
+        android:name="com.example.preeckle.ui.populars.PopularsFragment"
+        android:label="@string/popularsTitle"
+        tools:layout="@layout/fragment_populars" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.preeckle.ui.notifications.NotificationsFragment"
+        android:label="@string/notificationsTitle"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.preeckle.ui.profile.ProfileFragment"
+        android:label="@string/profileTitle"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

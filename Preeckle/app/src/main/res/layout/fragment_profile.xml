@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/backToMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/arrow_back"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+            android:id="@+id/inboxButton"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:background="@drawable/gradient_follow_button_borded"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="@string/inboxButton"
+            android:textSize="12sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#fff"
+
+            app:layout_constraintStart_toEndOf="@id/profileImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/profileImage"
+            app:layout_constraintTop_toTopOf="@id/profileImage"/>
+
+        <Button
+            android:id="@+id/profileButton"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:background="@drawable/gradient_follow_button_borded"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="@string/followTitle"
+            android:textSize="12sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#fff"
+
+            app:layout_constraintEnd_toStartOf="@id/profileImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/profileImage"
+            app:layout_constraintTop_toTopOf="@id/profileImage"/>
+
+
+        <Button
+            android:id="@+id/loggoutButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/gradient_follow_button_borded"
+            android:clickable="true"
+            android:contentDescription="@string/complaintDescription"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/loggoutIcon"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+
+            android:fontFamily="@font/gilroy_bold"
+            android:textColor="#fff"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/profileImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/profile_black"
+            app:siRadius="6dp"
+            app:siBorderWidth="0dp"
+            app:siBorderColor="@android:color/black"
+            app:siSquare="true"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="@string/profileName"
+            android:textAlignment="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+        <TextView
+            android:id="@+id/profileUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/profileName"
+            android:textAlignment="center"
+
+            android:textColor="#000000"
+            android:textSize="16sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileName" />
+
+        <TextView
+            android:id="@+id/profileBio"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:maxWidth="230dp"
+            android:maxHeight="60dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="0dp"
+            android:fontFamily="@font/gilroy_regular"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textAlignment="center"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileUsername"/>
+
+        <TextView
+            android:id="@+id/preecklesData"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/gilroy_medium"
+
+            android:text="@string/followersData"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="25sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileBio" />
+
+        <TextView
+            android:id="@+id/preecklesTextMain"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/gilroy_medium"
+
+            android:text="@string/preecklesTextMain"
+            android:textAlignment="center"
+            android:textColor="#AA000000"
+            android:textSize="13sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/preecklesData" />
+
+        <TextView
+            android:id="@+id/lovetsData"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:layout_marginStart="15dp"
+            android:text="@string/followingData"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="25sp"
+
+            app:layout_constraintStart_toEndOf="@+id/preecklesData"
+            app:layout_constraintTop_toBottomOf="@id/profileBio" />
+
+        <TextView
+            android:id="@+id/lovetsTextProfile"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/lovetsTextProfile"
+            android:textAlignment="center"
+
+            android:textColor="#AA000000"
+            android:textSize="13sp"
+
+            app:layout_constraintStart_toEndOf="@+id/preecklesTextMain"
+            app:layout_constraintTop_toBottomOf="@+id/lovetsData" />
+
+        <TextView
+            android:id="@+id/followersData"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/gilroy_medium"
+
+            android:text="@string/followersData"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="25sp"
+
+            app:layout_constraintStart_toEndOf="@+id/lovetsData"
+            app:layout_constraintTop_toBottomOf="@id/profileBio" />
+
+        <TextView
+            android:id="@+id/followersText"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/followersText"
+            android:textAlignment="center"
+
+            android:textColor="#AA000000"
+            android:textSize="13sp"
+
+            app:layout_constraintStart_toEndOf="@+id/lovetsTextProfile"
+            app:layout_constraintTop_toBottomOf="@+id/followersData" />
+
+        <TextView
+            android:id="@+id/followingData"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/gilroy_medium"
+
+            android:text="@string/followingData"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="25sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileBio" />
+
+        <TextView
+            android:id="@+id/followingText"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/followingText"
+            android:textAlignment="center"
+
+            android:textColor="#AA000000"
+            android:textSize="13sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/followingData" />
+
+        <!-- DAQUI PRA BAIXO -->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/storiesRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lovetsTextProfile"
+            tools:layout_editor_absoluteY="292dp" />
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/timelineRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="30dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/storiesRecycler"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

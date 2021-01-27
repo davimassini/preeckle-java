@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1061459955666",
+    "firebase_url": "https://preeckle.firebaseio.com",
+    "project_id": "preeckle",
+    "storage_bucket": "preeckle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061459955666:android:0af240203d20328ae7820b",
+        "android_client_info": {
+          "package_name": "com.example.preeckle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061459955666-m7mvkglcmoqeb04kasbj6q0p99aanfvj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.preeckle",
+            "certificate_hash": "43aff8ed82d2d5d247c8462b73a496c854bc86c6"
+          }
+        },
+        {
+          "client_id": "1061459955666-jnjevc8qdu2g5k6p5dt7tpnech5jlui1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv-8-vjDp84wtSLRLBRYOEqQbuZClGNy8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1061459955666-jnjevc8qdu2g5k6p5dt7tpnech5jlui1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

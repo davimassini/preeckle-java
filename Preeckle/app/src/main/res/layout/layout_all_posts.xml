@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="25dp"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp">
+
+    <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+        android:id="@+id/photoPost"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        app:siShape="@drawable/background_photo_shape"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_user_profile"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/profileImagePost"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/profile"
+            app:siRadius="5dp"
+            app:siBorderWidth="0dp"
+            app:siBorderColor="@android:color/black"
+            app:siSquare="true"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shapeDataBackground"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:background="@drawable/background_data_post"
+
+        app:layout_constraintEnd_toEndOf="@id/photoPost"
+        app:layout_constraintBottom_toBottomOf="@id/photoPost">
+
+        <TextView
+            android:id="@+id/likeIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/notification_icon_light"
+            android:clickable="true"
+            android:focusable="true"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/shapeDataBackground"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/calendarPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/calendarPost"
+        android:fontFamily="@font/gilroy_regular"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/photoPost" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

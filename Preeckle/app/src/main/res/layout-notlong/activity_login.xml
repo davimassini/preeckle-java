@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_full_main" />
+
+    <TextView
+        android:id="@+id/preeckleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="170dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="@string/app_name"
+        android:textColor="#000"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/welcomeString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/preeckleName"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/gilroy_light"
+        android:text="@string/welcomeBack"
+        android:textColor="#000"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/emailField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcomeString"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:autofillHints=""
+        android:paddingBottom="25dp"
+        android:backgroundTint="#99ffffff"
+        android:ems="17"
+        android:fontFamily="@font/gilroy_medium"
+        android:hint="@string/emailText"
+        android:inputType="textEmailAddress"
+        android:textColor="#aaffffff"
+        android:textColorHint="#aaffffff"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailField"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:paddingBottom="25dp"
+        android:backgroundTint="#99ffffff"
+        android:ems="17"
+        android:fontFamily="@font/gilroy_medium"
+        android:hint="@string/passwordText"
+        android:inputType="textPassword"
+        android:textColor="#aaffffff"
+        android:textColorHint="#aaffffff"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/signInConfirmButton"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordField"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_login"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="@string/signIn"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/forgotPasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/signUpButton"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="37dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="@string/forgotPasswordLogin"
+        android:textColor="#aaffffff"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/signUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="@string/signUpLogin"
+        android:textColor="#AA000000"
+        android:textSize="17sp" />
+
+</RelativeLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/addPostBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/white"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarAddPost"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/shadow_topbar_main"
+                android:theme="?attr/actionBarTheme">
+
+                <ImageButton
+                    android:id="@+id/closeActivityAction"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/arrow_back" />
+
+                <TextView
+                    android:id="@+id/addPostTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:text="@string/addPostTitle"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImageAddPost"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/profile_icon_dark"
+
+            app:civ_border_color="#000"
+            app:civ_border_width="2dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addPostBarLayout" />
+
+        <EditText
+            android:id="@+id/addWriteSpace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="@string/addPostTint"
+            android:paddingTop="20dp"
+            android:textColor="#000"
+            android:textColorHint="#000"
+            android:textSize="15sp"
+
+            app:layout_constraintStart_toEndOf="@id/profileImageAddPost"
+            app:layout_constraintTop_toBottomOf="@id/addPostBarLayout" />
+
+
+        <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+            android:id="@+id/photoSelected"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintStart_toStartOf="@id/addWriteSpace"
+
+            app:layout_constraintTop_toBottomOf="@id/addWriteSpace"
+            app:siShape="@drawable/background_photo_shape" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAddImagePost"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@android:color/white"
+        app:fabCradleMargin="15dp"
+        app:fabCradleRoundedCornerRadius="50dp"
+        app:fabAlignmentMode="end">
+
+        <ImageView
+            android:id="@+id/addPhotoAction"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/camera_icon_dark"/>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addPostButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gradient_confirm_button_action"
+        app:layout_anchor="@+id/bottomAddImagePost"
+        app:layout_anchorGravity="end|top"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
