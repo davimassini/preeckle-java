@@ -13,9 +13,9 @@ Para instalar o preeckle-java, siga estas etapas:
 ```
 1. Importe o projeto (a pasta Preeckle) para sua IDE.
 2. Caso apareça erros de .gradle, referente aos imports, faça os métodos abaixo.
---- Clique em File, posicionado no menu superior, e depois clique em Sync Project with Gradle Files
---- Clique em File, posicionado no menu superior, e depois clique em Project Structure > Properties e mude para as suas versões.
---- Clique em Build, posicionado no menu superior, e depois clique em Rebuild Project.
+--- Clique em File e depois clique em Sync Project with Gradle Files
+--- Clique em File e depois clique em Project Structure > Properties e mude para as suas versões.
+--- Clique em Build e depois clique em Rebuild Project.
 ```
 
 ## ☕ Usando preeckle-java
@@ -28,11 +28,11 @@ Para usar o preeckle-java, siga estas etapas:
 3. Clique no icone de start para começar a depuração, ou aperte Shift + F10.
 
 CONTAS PADRÕES
-    davimassini@gmail.com
-    123123
+Login: davimassini@gmail.com
+Senha: 123123
 
-    teste@gmail.com
-    123123
+Login: teste@gmail.com
+Senha: 123123
 
 ```
 
